@@ -34,7 +34,6 @@ def main():
       print(f"Container Output: {container.get('output', 'No output')}")
       print(f"Container Result: {container.get('resultObject', 'No result')}")
       print("-------------------------------------------------------------")
-    
 
 
 if __name__ == "__main__":

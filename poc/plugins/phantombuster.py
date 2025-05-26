@@ -9,15 +9,20 @@ class PhantomBuster(object):
 
   # Endpoints
   ORGS = "orgs/fetch"
-  AGENTS = "agents/fetch-all"
-  AGENT = "agent/fetch?id={}"
-  AGENT_OUTPUT = "agents/fetch-output?id={}"
-  SCRIPTS = "scripts/fetch-all"
-  SCRIPT = "script/fetch?id={}"
-  CONTAINERS = "containers/fetch-all?agentId={}"
-  CONTAINER = "containers/fetch?id={}"
-  CONTAINER_OUTPUT = "containers/fetch-output?id={}&raw={}"
-  CONTAINER_RESULTS = "containers/fetch-result-object?id={}"
+  # Scripts - Called Phantoms
+  SCRIPTS = "scripts/fetch-all"               # GET
+  SCRIPT = "script/fetch?id={}"               # GET
+  # Agents - Run Phantoms
+  AGENTS = "agents/fetch-all"                 # GET
+  AGENT = "agent/fetch?id={}"                 # GET
+  AGENT_OUTPUT = "agents/fetch-output?id={}"  # GET
+  AGENT_LAUNCH = "agents/launcH"              # POST
+  AGENT_SAVE = "agents/save"                  # POST
+  # Containers - Execution results
+  CONTAINERS = "containers/fetch-all?agentId={}"              # GET
+  CONTAINER = "containers/fetch?id={}"                        # GET
+  CONTAINER_OUTPUT = "containers/fetch-output?id={}&raw={}"   # GET
+  CONTAINER_RESULTS = "containers/fetch-result-object?id={}"  # GET
 
   def __init__(self, api_key, org_id=None):
     """
